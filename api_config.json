@@ -1,0 +1,14 @@
+{
+	"name": "Store",
+	"path": "/v2",
+	"state": "published",
+	"version": "1.0.2",
+	"organization": "API Development",
+	"apiDefinition": "store.json",
+	"image": "openapi.png",
+	"vhost": "208.67.129.24:8065",
+	"tags": {
+		"nextStage": ["prod"],
+		"amplifyCentral": ["true"]
+	}
+}

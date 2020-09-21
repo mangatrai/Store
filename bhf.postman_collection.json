@@ -1,0 +1,229 @@
+{
+	"info": {
+		"_postman_id": "20ee4d81-cc65-4d8c-9ae5-802861921bb7",
+		"name": "bhf",
+		"description": "API Request collection for BHF",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Pet",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e63766de-f518-414a-a21a-16a4a025505a",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 0,\n  \"category\": {\n    \"id\": 0,\n    \"name\": \"string\"\n  },\n  \"name\": \"doggie\",\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"tags\": [\n    {\n      \"id\": 0,\n      \"name\": \"string\"\n    }\n  ],\n  \"status\": \"available\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://208.67.129.24:8065/v2/pet",
+					"protocol": "https",
+					"host": [
+						"208",
+						"67",
+						"129",
+						"24"
+					],
+					"port": "8065",
+					"path": [
+						"v2",
+						"pet"
+					]
+				},
+				"description": "Add Pet to Database"
+			},
+			"response": []
+		},
+		{
+			"name": "Find By Status",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ab172c1f-a4d1-4b3d-a102-84fcd662f2f6",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://208.67.129.24:8065/v2/pet/findByStatus?status=available",
+					"protocol": "https",
+					"host": [
+						"208",
+						"67",
+						"129",
+						"24"
+					],
+					"port": "8065",
+					"path": [
+						"v2",
+						"pet",
+						"findByStatus"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "available"
+						}
+					]
+				},
+				"description": "Find pet status"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Store Inventory",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "01e9e3e1-b0fa-4ee7-a28d-71e210566234",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://208.67.129.24:8065/v2/store/inventory",
+					"protocol": "https",
+					"host": [
+						"208",
+						"67",
+						"129",
+						"24"
+					],
+					"port": "8065",
+					"path": [
+						"v2",
+						"store",
+						"inventory"
+					]
+				},
+				"description": "request to retrieve store inventory"
+			},
+			"response": []
+		},
+		{
+			"name": "Place an Order",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "84cd5d7b-1aa1-4f3e-afa4-52525ac7ce7a",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 0,\n  \"petId\": 0,\n  \"quantity\": 0,\n  \"shipDate\": \"2020-05-22T02:08:13.522Z\",\n  \"status\": \"placed\",\n  \"complete\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://208.67.129.24:8065/v2/store/order",
+					"protocol": "https",
+					"host": [
+						"208",
+						"67",
+						"129",
+						"24"
+					],
+					"port": "8065",
+					"path": [
+						"v2",
+						"store",
+						"order"
+					]
+				},
+				"description": "Post request to place an order"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
