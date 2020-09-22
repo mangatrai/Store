@@ -380,8 +380,14 @@
           }
         ],
         "responses": {
+          "200": {
+            "description": "OK"
+          },
           "405": {
             "description": "Invalid input"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         },
         "security": [
@@ -422,8 +428,23 @@
           }
         ],
         "responses": {
+          "200": {
+            "description": "OK"
+          },
           "400": {
             "description": "Invalid pet value"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         },
         "security": [
@@ -686,6 +707,9 @@
           }
         },
         "responses": {
+          "200": {
+            "description": "OK"
+          },
           "default": {
             "description": "successful operation",
             "content": {
@@ -822,6 +846,9 @@
         "operationId": "logoutUser",
         "parameters": [],
         "responses": {
+          "200": {
+            "description": "OK"
+          },
           "default": {
             "description": "successful operation"
           }
@@ -910,6 +937,9 @@
           }
         },
         "responses": {
+          "200": {
+            "description": "OK"
+          },
           "default": {
             "description": "successful operation"
           }
@@ -934,11 +964,23 @@
           }
         ],
         "responses": {
+          "200": {
+            "description": "OK"
+          },
           "400": {
             "description": "Invalid username supplied"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
           "404": {
             "description": "User not found"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
