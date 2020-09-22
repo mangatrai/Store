@@ -1,14 +1,41 @@
 {
 	"name": "Store",
-	"path": "/v2",
+	"path": "/v3",
 	"state": "published",
-	"version": "1.0.2",
+	"version": "2.0.0",
 	"organization": "API Development",
 	"apiDefinition": "store.json",
 	"image": "openapi.png",
-	"vhost": "208.67.129.24:8065",
+	"vhost": "phx-24.demo.axway.com:8065",
 	"tags": {
-		"nextStage": ["prod"],
-		"amplifyCentral": ["true"]
+		"nextStage": ["dev"]
+	},
+	"securityProfiles": [{
+		"name": "_default",
+		"isDefault": true,
+		"devices": [{
+			"name": "API Key",
+			"type": "apiKey",
+			"order": 0,
+			"properties": {
+				"apiKeyFieldName": "KeyId",
+				"takeFrom": "HEADER",
+				"removeCredentialsOnSuccess": "false"
+			}
+		}]
+	}],
+	"clientOrganizations": [
+		"ALL"
+	],
+	"systemQuota": {
+		"restrictions": [{
+			"method": "*",
+			"type": "throttle",
+			"config": {
+				"period": "hour",
+				"messages": 66,
+				"per": 2
+			}
+		}]
 	}
 }
