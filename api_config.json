@@ -8,7 +8,8 @@
 	"image": "openapi.png",
 	"vhost": "208.67.129.24:8065",
 	"tags": {
-		"nextStage": ["dev"]
+		"nextStage": ["dev"],
+    "amplifyCentral":["true"]
 	},
 	"securityProfiles": [{
 		"name": "_default",
