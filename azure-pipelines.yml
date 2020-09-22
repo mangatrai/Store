@@ -46,5 +46,5 @@ jobs:
       versionSpec: '12.x'
   - script: npm install -g newman
     displayName: Install Postman- newman
-  - script: newman run postman_collection.json --insecure
+  - script: newman run Store_API_Key.postman_collection.json --insecure
     displayName: Run Tests

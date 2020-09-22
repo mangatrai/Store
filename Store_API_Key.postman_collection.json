@@ -1,8 +1,8 @@
 {
 	"info": {
-		"_postman_id": "20ee4d81-cc65-4d8c-9ae5-802861921bb7",
-		"name": "Store",
-		"description": "API Request collection for Store APIs",
+		"_postman_id": "18d8a7e8-4a8c-4ca3-8edc-fb31e3371ff2",
+		"name": "Store API Key",
+		"description": "API Request collection for Store",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -12,7 +12,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "e63766de-f518-414a-a21a-16a4a025505a",
+						"id": "fdb16809-a6c7-4092-985f-49028d8e3cd1",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -34,6 +34,11 @@
 						"key": "Accept",
 						"value": "application/json",
 						"type": "text"
+					},
+					{
+						"key": "KeyId",
+						"value": "003feb78-eeae-4902-82ac-0a46d88bcf78",
+						"type": "text"
 					}
 				],
 				"body": {
@@ -46,7 +51,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://208.67.129.24:8065/v2/pet",
+					"raw": "https://208.67.129.24:8065/v3/pet",
 					"protocol": "https",
 					"host": [
 						"208",
@@ -56,7 +61,7 @@
 					],
 					"port": "8065",
 					"path": [
-						"v2",
+						"v3",
 						"pet"
 					]
 				},
@@ -70,7 +75,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "ab172c1f-a4d1-4b3d-a102-84fcd662f2f6",
+						"id": "3b83d16a-02c7-4b77-baa6-cbac98eea180",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -93,10 +98,9 @@
 				"method": "GET",
 				"header": [
 					{
-						"key": "",
-						"value": "",
-						"type": "text",
-						"disabled": true
+						"key": "KeyId",
+						"value": "003feb78-eeae-4902-82ac-0a46d88bcf78",
+						"type": "text"
 					},
 					{
 						"key": "",
@@ -112,7 +116,7 @@
 					}
 				],
 				"url": {
-					"raw": "https://208.67.129.24:8065/v2/pet/findByStatus?status=available",
+					"raw": "https://208.67.129.24:8065/v3/pet/findByStatus?status=available",
 					"protocol": "https",
 					"host": [
 						"208",
@@ -122,7 +126,7 @@
 					],
 					"port": "8065",
 					"path": [
-						"v2",
+						"v3",
 						"pet",
 						"findByStatus"
 					],
@@ -143,7 +147,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "01e9e3e1-b0fa-4ee7-a28d-71e210566234",
+						"id": "49fc436f-684e-4e1f-abea-c018d7e6bf92",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -155,9 +159,15 @@
 			],
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "KeyId",
+						"value": "003feb78-eeae-4902-82ac-0a46d88bcf78",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": "https://208.67.129.24:8065/v2/store/inventory",
+					"raw": "https://208.67.129.24:8065/v3/store/inventory",
 					"protocol": "https",
 					"host": [
 						"208",
@@ -167,7 +177,7 @@
 					],
 					"port": "8065",
 					"path": [
-						"v2",
+						"v3",
 						"store",
 						"inventory"
 					]
@@ -177,12 +187,12 @@
 			"response": []
 		},
 		{
-			"name": "Place an Order",
+			"name": "GetOrderStatus",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
-						"id": "84cd5d7b-1aa1-4f3e-afa4-52525ac7ce7a",
+						"id": "bae08ce1-ce70-4c6d-9ae9-a5018454abb3",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -193,19 +203,16 @@
 				}
 			],
 			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"id\": 0,\n  \"petId\": 0,\n  \"quantity\": 0,\n  \"shipDate\": \"2020-05-22T02:08:13.522Z\",\n  \"status\": \"placed\",\n  \"complete\": true\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
+				"method": "GET",
+				"header": [
+					{
+						"key": "KeyId",
+						"value": "003feb78-eeae-4902-82ac-0a46d88bcf78",
+						"type": "text"
 					}
-				},
+				],
 				"url": {
-					"raw": "https://208.67.129.24:8065/v2/store/order",
+					"raw": "https://208.67.129.24:8065/v3/store/order/1",
 					"protocol": "https",
 					"host": [
 						"208",
@@ -215,14 +222,82 @@
 					],
 					"port": "8065",
 					"path": [
-						"v2",
+						"v3",
 						"store",
-						"order"
+						"order",
+						"1"
 					]
 				},
-				"description": "Post request to place an order"
+				"description": "get order status"
 			},
 			"response": []
+		},
+		{
+			"name": "Get User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7cc39bb4-2534-4582-a354-d15c550e4a75",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "KeyId",
+						"value": "003feb78-eeae-4902-82ac-0a46d88bcf78",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://208.67.129.24:8065/v3/user/user1",
+					"protocol": "https",
+					"host": [
+						"208",
+						"67",
+						"129",
+						"24"
+					],
+					"port": "8065",
+					"path": [
+						"v3",
+						"user",
+						"user1"
+					]
+				},
+				"description": "Get user by user name"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "6d0d9009-9f7e-4690-80c8-6819b09e8144",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "a0fec1d2-a860-4c5e-9c59-3b7d78c4b3fe",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		}
 	],
 	"protocolProfileBehavior": {}
