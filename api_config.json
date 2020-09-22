@@ -33,7 +33,7 @@
 			"type": "throttle",
 			"config": {
 				"period": "hour",
-				"messages": 66,
+				"messages": 60,
 				"per": 2
 			}
 		}]
