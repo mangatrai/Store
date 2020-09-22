@@ -46,7 +46,7 @@ jobs:
       versionSpec: '12.x'
   - script: npm install -g newman
     displayName: Install Postman- newman
-  - script: newman run bhf.postman_collection.json --insecure
+  - script: newman run postman_collection.json --insecure
     displayName: Run Tests
 - job: alert	
   pool: server
