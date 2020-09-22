@@ -1,8 +1,8 @@
 {
 	"info": {
 		"_postman_id": "20ee4d81-cc65-4d8c-9ae5-802861921bb7",
-		"name": "bhf",
-		"description": "API Request collection for BHF",
+		"name": "Store",
+		"description": "API Request collection for Store APIs",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
