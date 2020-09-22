@@ -48,13 +48,3 @@ jobs:
     displayName: Install Postman- newman
   - script: newman run postman_collection.json --insecure
     displayName: Run Tests
-- job: alert	
-  pool: server
-  displayName: Push Message to Service bus
-  condition: always()
-  dependsOn: deploy
-  steps:
-  - task: PublishToAzureServiceBus@1
-    inputs: 
-      azureSubscription: devops
-      messageBody: $(Build.BuildId)
