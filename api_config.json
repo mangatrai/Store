@@ -9,7 +9,7 @@
 	"vhost": "208.67.129.24:8065",
 	"tags": {
 		"nextStage": ["dev"],
-    "amplifyCentral":["true"]
+		"amplifyCentral": ["true"]
 	},
 	"securityProfiles": [{
 		"name": "_default",
@@ -28,6 +28,9 @@
 	"clientOrganizations": [
 		"ALL"
 	],
+	"applications": [{
+		"name": "amplify_central"
+	}],
 	"systemQuota": {
 		"restrictions": [{
 			"method": "*",
