@@ -2,7 +2,7 @@
 	"name": "Store",
 	"path": "/v3",
 	"state": "published",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"organization": "API Development",
 	"apiDefinition": "store.json",
 	"image": "openapi.png",
