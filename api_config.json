@@ -1,13 +1,53 @@
 {
-	"name": "Store",
+	"name": "Covetrus PetStore",
 	"path": "/v3",
 	"state": "published",
-	"version": "2.0.0",
-	"organization": "API Development",
+	"version": "1.0.5",
+	"organization": "Covetrus",
 	"apiDefinition": "store.json",
 	"image": "openapi.png",
 	"vhost": "208.67.129.24:8065",
 	"tags": {
-		"nextStage": ["dev"]
-	}
+		"nextStage": ["preprod"]
+	},
+	"securityProfiles": [
+	{
+     		"name": "_default",
+     		"isDefault": true,
+		      "devices":[
+		         {
+		            "type":"oauthExternal",
+		            "name":"OAuth (External)",
+		            "order":1,
+		            "properties":{
+		               "tokenStore":"Azure AD Validate Security Token",
+		               "accessTokenLocation":"HEADER",
+		               "authorizationHeaderPrefix":"Bearer",
+		               "accessTokenLocationQueryString":"",
+		               "scopesMustMatch":"Any",
+		               "scopes":"NA",
+		               "removeCredentialsOnSuccess":true,
+		               "implicitGrantEnabled":true,
+		               "useClientRegistry":true,
+		               "subjectSelector": "${//oauth.token.client_id//}",
+		               "implicitGrantLoginEndpointUrl":"https://login.microsoftonline.com/fbd01e32-d498-46ce-8043-05686893fae4/oauth2/authorize",
+		               "implicitGrantLoginTokenName":"access_token",
+		               "authCodeGrantTypeEnabled":true,
+		               "authCodeGrantTypeRequestEndpointUrl":"https://login.microsoftonline.com/fbd01e32-d498-46ce-8043-05686893fae4/oauth2/authorize",
+		               "authCodeGrantTypeRequestClientIdName":"client_id",
+		               "authCodeGrantTypeRequestSecretName":"client_secret",
+		               "authCodeGrantTypeTokenEndpointUrl":"https://login.microsoftonline.com/fbd01e32-d498-46ce-8043-05686893fae4/oauth2/token",
+		               "authCodeGrantTypeTokenEndpointTokenName":"access_code"
+		            }
+		         }
+		      ]
+     	}
+	
+	],
+	"clientOrganizations": [
+		"ALL"
+	],
+	"applications": [{
+		"name": "covetrus"
+	}]
 }
