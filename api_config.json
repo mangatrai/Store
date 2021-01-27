@@ -20,7 +20,7 @@
 		            "name":"OAuth (External)",
 		            "order":1,
 		            "properties":{
-		               "tokenStore":"Azure AD Validate Security Token",
+		               "tokenStore":"Auth0 as IDP",
 		               "accessTokenLocation":"HEADER",
 		               "authorizationHeaderPrefix":"Bearer",
 		               "accessTokenLocationQueryString":"",
@@ -49,5 +49,16 @@
 	],
 	"applications": [{
 		"name": "covetrus"
-	}]
+	}],
+	"systemQuota": {
+		"restrictions": [{
+			"method": "*",
+			"type": "throttle",
+			"config": {
+				"period": "hour",
+				"messages": 60,
+				"per": 2
+			}
+		}]
+	}
 }
