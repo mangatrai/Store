@@ -1,6 +1,6 @@
 {
-	"name": "Covetrus PetStore",
-	"path": "/v3",
+	"name": "Covetrus Pet Store",
+	"path": "/petstore/v3/",
 	"state": "published",
 	"version": "1.0.5",
 	"organization": "Covetrus",
@@ -26,18 +26,18 @@
 		               "authorizationHeaderPrefix":"Bearer",
 		               "accessTokenLocationQueryString":"",
 		               "scopesMustMatch":"Any",
-		               "scopes":"resource.WRITE, resource.READ",
+		               "scopes":"openid",
 		               "removeCredentialsOnSuccess":true,
 		               "implicitGrantEnabled":true,
 		               "useClientRegistry":true,
 		               "subjectSelector": "${//oauth.token.client_id//}",
-		               "implicitGrantLoginEndpointUrl":"https://login.microsoftonline.com/fbd01e32-d498-46ce-8043-05686893fae4/oauth2/authorize",
+		               "implicitGrantLoginEndpointUrl":"https://dev-7b4k9gxy.us.auth0.com/authorize",
 		               "implicitGrantLoginTokenName":"access_token",
 		               "authCodeGrantTypeEnabled":true,
-		               "authCodeGrantTypeRequestEndpointUrl":"https://login.microsoftonline.com/fbd01e32-d498-46ce-8043-05686893fae4/oauth2/authorize",
+		               "authCodeGrantTypeRequestEndpointUrl":"https://dev-7b4k9gxy.us.auth0.com/authorize",
 		               "authCodeGrantTypeRequestClientIdName":"client_id",
 		               "authCodeGrantTypeRequestSecretName":"client_secret",
-		               "authCodeGrantTypeTokenEndpointUrl":"https://login.microsoftonline.com/fbd01e32-d498-46ce-8043-05686893fae4/oauth2/token",
+		               "authCodeGrantTypeTokenEndpointUrl":"https://dev-7b4k9gxy.us.auth0.com/oauth/token",
 		               "authCodeGrantTypeTokenEndpointTokenName":"access_code"
 		            }
 		         }
@@ -49,7 +49,7 @@
 		"ALL"
 	],
 	"applications": [{
-		"name": "covetrus"
+		"name": "Auth0 Web App"
 	}],
 	"systemQuota": {
 		"restrictions": [{
@@ -61,5 +61,18 @@
 				"per": 2
 			}
 		}]
-	}
+	},
+  "applicationQuota":{
+      "restrictions":[
+         {
+            "method":"*",
+            "type":"throttlemb",
+            "config":{
+               "period":"hour",
+               "mb":55,
+               "per":1
+            }
+         }
+      ]
+   }
 }
