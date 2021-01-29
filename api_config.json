@@ -9,7 +9,7 @@
 	"vhost": "208.67.129.24:8065",
 	"tags": {
 		"nextStage": ["preprod"],
-    "status": ["Beta","Test"]
+    "status": ["Beta"]
 	},
 	"securityProfiles": [
 	{
