@@ -2,7 +2,7 @@
 	"name": "Covetrus Pet Store",
 	"path": "/petstore/v3/",
 	"state": "published",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"organization": "Covetrus",
 	"apiDefinition": "store.json",
 	"image": "openapi.png",
