@@ -6,7 +6,7 @@ parameters:
 - name: host
   displayName: API Manager Hostname
   type: string
-  default: 208.67.129.41
+  default: phx41.demo.axway.com
 - name: username
   displayName: API Manager Username
   type: string
@@ -14,7 +14,7 @@ parameters:
 #- name: password
 #  displayName: API Manager Password
 #  type: string
-#  default: Space*BHF*117
+#  default: Space*Covertus*41
 - name: returnCodeMapping
   displayName: CLI Return code mapping
   type: string
