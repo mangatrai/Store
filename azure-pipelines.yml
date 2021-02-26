@@ -6,7 +6,7 @@ parameters:
 - name: host
   displayName: API Manager Hostname
   type: string
-  default: 208.67.129.24
+  default: 208.67.129.41
 - name: username
   displayName: API Manager Username
   type: string

@@ -6,7 +6,7 @@
 	"organization": "Covetrus",
 	"apiDefinition": "store.json",
 	"image": "openapi.png",
-	"vhost": "208.67.129.24:8065",
+	"vhost": "phx41.demo.axway.com:8065",
 	"tags": {
 		"nextStage": ["preprod"],
     "status": ["Beta"]
