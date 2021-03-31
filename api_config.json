@@ -1,6 +1,6 @@
 {
 	"name": "Axway Store",
-	"path": "/petstore/v3/",
+	"path": "/petstore/v4/",
 	"state": "published",
 	"version": "1.0.6",
 	"organization": "API Development",
