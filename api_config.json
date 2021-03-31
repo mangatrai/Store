@@ -1,15 +1,16 @@
 {
-	"name": "Covetrus Pet Store",
+	"name": "Axway Store",
 	"path": "/petstore/v3/",
 	"state": "published",
 	"version": "1.0.6",
-	"organization": "Covetrus",
+	"organization": "API Development",
 	"apiDefinition": "store.json",
 	"image": "openapi.png",
-	"vhost": "phx41.demo.axway.com:8065",
+	"vhost": "phx-24.demo.axway.com:8065",
 	"tags": {
 		"nextStage": ["preprod"],
-    "status": ["Beta"]
+    "status": ["Beta"],
+    "apiType": ["Store"]
 	},
 	"securityProfiles": [
 	{
@@ -21,7 +22,7 @@
 		            "name":"OAuth (External)",
 		            "order":1,
 		            "properties":{
-		               "tokenStore":"Auth0 as IDP",
+		               "tokenStore":"Okta as IDP",
 		               "accessTokenLocation":"HEADER",
 		               "authorizationHeaderPrefix":"Bearer",
 		               "accessTokenLocationQueryString":"",
@@ -31,13 +32,13 @@
 		               "implicitGrantEnabled":true,
 		               "useClientRegistry":true,
 		               "subjectSelector": "${//oauth.token.client_id//}",
-		               "implicitGrantLoginEndpointUrl":"https://dev-7b4k9gxy.us.auth0.com/authorize",
+		               "implicitGrantLoginEndpointUrl":"https://dev-725271.okta.com/oauth2/default/v1/authorize",
 		               "implicitGrantLoginTokenName":"access_token",
 		               "authCodeGrantTypeEnabled":true,
-		               "authCodeGrantTypeRequestEndpointUrl":"https://dev-7b4k9gxy.us.auth0.com/authorize",
+		               "authCodeGrantTypeRequestEndpointUrl":"https://dev-725271.okta.com/oauth2/default/v1/authorize",
 		               "authCodeGrantTypeRequestClientIdName":"client_id",
 		               "authCodeGrantTypeRequestSecretName":"client_secret",
-		               "authCodeGrantTypeTokenEndpointUrl":"https://dev-7b4k9gxy.us.auth0.com/oauth/token",
+		               "authCodeGrantTypeTokenEndpointUrl":"https://dev-725271.okta.com/oauth2/default/v1/token",
 		               "authCodeGrantTypeTokenEndpointTokenName":"access_code"
 		            }
 		         }
@@ -49,7 +50,7 @@
 		"ALL"
 	],
 	"applications": [{
-		"name": "Auth0 Web App"
+		"name": "Okta Web App"
 	}],
 	"systemQuota": {
 		"restrictions": [{
