@@ -6,7 +6,7 @@ parameters:
 - name: host
   displayName: API Manager Hostname
   type: string
-  default: phx41.demo.axway.com
+  default: phx-24.demo.axway.com
 - name: username
   displayName: API Manager Username
   type: string
