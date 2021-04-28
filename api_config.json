@@ -1,8 +1,8 @@
 {
-	"name": "HM Store",
+	"name": "Axway Store",
 	"path": "/petstore/v3/",
 	"state": "published",
-	"version": "1.0.6",
+	"version": "1.0.5",
 	"organization": "API Development",
 	"apiDefinition": "store.json",
 	"image": "openapi.png",
