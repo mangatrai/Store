@@ -2,7 +2,7 @@
 	"name": "Axway Store",
 	"path": "/petstore/v3/",
 	"state": "published",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"organization": "API Development",
 	"apiDefinition": "store.json",
 	"image": "openapi.png",
